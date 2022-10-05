@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-primary">
+  <button @click="clickSave" class="btn btn-primary">
     <i class="fa fa-2x" :class="icon"></i>
   </button>
 </template>
@@ -9,6 +9,11 @@ export default {
     icon: {
       type: String,
       default: "fa-plus"
+    }
+  },
+  methods: {
+    clickSave() {
+      this.$emit('on:click')
     }
   }
 }
